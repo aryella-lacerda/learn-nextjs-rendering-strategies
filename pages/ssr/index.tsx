@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 
-type NumberProps = {
+type Props = {
   number: number;
 };
 
-export const getStaticProps = () => {
+export const getServerSideProps = () => {
   return {
     props: {
       number: Math.random(),
@@ -12,7 +12,7 @@ export const getStaticProps = () => {
   };
 };
 
-const Home: NextPage<NumberProps> = (props) => {
+const Home: NextPage<Props> = (props) => {
   return <h1>{props.number}</h1>;
 };
 

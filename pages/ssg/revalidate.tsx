@@ -6,6 +6,7 @@ type NumberProps = {
 
 export const getStaticProps = () => {
   return {
+    revalidate: 10, //seconds
     props: {
       number: Math.random(),
     },
